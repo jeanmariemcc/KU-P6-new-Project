@@ -9,12 +9,14 @@ export default function Post({ post }) {
 			<img className="postImg" src={post.imageURL} alt="atlas" />
 			<div className="postInfo">
 				<span className="postTitle">
-					{/* <Link to="/post/abc" className="link"> */}
-					{post.title}
-					{/* </Link> */}
+					<Link to={`/post/${post._id}`} className="link">
+						{post.title}
+					</Link>
 				</span>
 				<hr />
-				<span className="postDate">Created on: {post.dateCreated}</span>
+				<span className="postDate">
+					Created on: {new Date(post.createdAt).toDateString()}
+				</span>
 			</div>
 			<p className="postDesc">{post.description}</p>
 		</div>

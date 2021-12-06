@@ -1,17 +1,39 @@
 import "./singlePost.css";
 
+import { useLocation } from "react-router";
+import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+// import { Context } from "../../context/Context";
+
+import axios from "axios";
+
 function SinglePost() {
+	const location = useLocation();
+	// this hook - useLocation - will pass the article id in pathname
+	const path = location.pathname.split("/")[2];
+
+	const [post, setPost] = useState({}); // useState hook setup with empty object
+	// useEffect - whenever this path changes, useEffect will launch
+	useEffect(() => {
+		// getPost is an internal function to useEffect because I cannot call asynch (axios) directly
+		const getPost = async () => {
+			const res = await axios.get("/articles/" + path);
+			setPost(res.data);
+			//   setTitle(res.data.title);
+			//   setDesc(res.data.desc);
+		};
+		getPost();
+	}, [path]);
+
 	return (
 		<div className="singlePost">
 			<div className="singlePostWrapper">
-				<img
-					className="singlePostImg"
-					src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-					alt=""
-				/>
-				<h1 className="singlePostTitle">Article Title</h1>
+				<img className="singlePostImg" src={post.imageURL} alt="" />
+				<h1 className="singlePostTitle">{post.title}</h1>
 				<div className="singlePostInfo">
-					<span>1 day ago</span>
+					<span>
+						Created on: {new Date(post.createdAt).toDateString()}
+					</span>
 					{/* Need logic to display only if admin */}
 					<div className="singlePostEdit">
 						<i className="singlePostIcon far fa-edit"></i>
@@ -19,41 +41,7 @@ function SinglePost() {
 					</div>
 					{/* end of need logic */}
 				</div>
-				<p className="singlePostDesc">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-					Iste error quibusdam ipsa quis quidem doloribus eos, dolore
-					ea iusto impedit! Voluptatum necessitatibus eum beatae,
-					adipisci voluptas a odit modi eos! Lorem, ipsum dolor sit
-					amet consectetur adipisicing elit. Iste error quibusdam ipsa
-					quis quidem doloribus eos, dolore ea iusto impedit!
-					Voluptatum necessitatibus eum beatae, adipisci voluptas a
-					odit modi eos! Lorem, ipsum dolor sit amet consectetur
-					adipisicing elit. Iste error quibusdam ipsa quis quidem
-					doloribus eos, dolore ea iusto impedit! Voluptatum
-					necessitatibus eum beatae, adipisci voluptas a odit modi
-					eos! Lorem, ipsum dolor sit amet consectetur adipisicing
-					elit. Iste error quibusdam ipsa quis quidem doloribus eos,
-					dolore ea iusto impedit! Voluptatum necessitatibus eum
-					beatae, adipisci voluptas a odit modi eos! Lorem, ipsum
-					dolor sit amet consectetur adipisicing elit. Iste error
-					quibusdam ipsa quis quidem doloribus eos, dolore ea iusto
-					impedit! Voluptatum necessitatibus eum beatae, adipisci
-					voluptas a odit modi eos!
-					<br />
-					<br />
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-					Iste error quibusdam ipsa quis quidem doloribus eos, dolore
-					ea iusto impedit! Voluptatum necessitatibus eum beatae,
-					adipisci voluptas a odit modi eos! Lorem, ipsum dolor sit
-					amet consectetur adipisicing elit. Iste error quibusdam ipsa
-					quis quidem doloribus eos, dolore ea iusto impedit!
-					Voluptatum necessitatibus eum beatae, adipisci voluptas a
-					odit modi eos! Lorem, ipsum dolor sit amet consectetur
-					adipisicing elit. Iste error quibusdam ipsa quis quidem
-					doloribus eos, dolore ea iusto impedit! Voluptatum
-					necessitatibus eum beatae, adipisci voluptas a odit modi
-					eos! Lorem, ipsum dolor sit amet consectetur.
-				</p>
+				<p className="singlePostDesc">{post.description}</p>
 			</div>
 		</div>
 	);

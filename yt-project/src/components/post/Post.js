@@ -1,44 +1,22 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./post.css";
 
-export default function Post() {
-	// export default function Post({img}) {
-
+export default function Post({ post }) {
+	console.log(post);
+	//property of article is one article from the map function in Posts.js
 	return (
 		<div className="post">
-			<img
-				className="postImg"
-				src="https://s-i.huffpost.com/gen/2250882/images/o-ATLAS-SHRUGGED-facebook.jpg"
-				alt="atlas"
-			/>
+			<img className="postImg" src={post.imageURL} alt="atlas" />
 			<div className="postInfo">
-				{/* <div className="postCats"> */}
-				{/* <span className="postCat"> */}
-				{/* <Link className="link" to="/posts?cat=Music"> */}
-				{/* Music */}
-				{/* </Link> */}
-				{/* </span> */}
-				{/* <span className="postCat"> */}
-				{/* <Link className="link" to="/posts?cat=Music"> */}
-				{/* Life */}
-				{/* </Link> */}
-				{/* </span> */}
-				{/* </div> */}
 				<span className="postTitle">
 					{/* <Link to="/post/abc" className="link"> */}
-					Article title
+					{post.title}
 					{/* </Link> */}
 				</span>
 				<hr />
-				<span className="postDate">Created on: 11/30/2021</span>
+				<span className="postDate">Created on: {post.dateCreated}</span>
 			</div>
-			<p className="postDesc">
-				DescriptionLorem ipsum dolor sit amet, consectetur adipisicing
-				elit. Assumenda officia architecto deserunt deleniti? Labore
-				ipsum aspernatur magnam fugiat, reprehenderit praesentium
-				blanditiis quos cupiditate ratione atque, exercitationem
-				quibusdam, reiciendis odio laboriosam?
-			</p>
+			<p className="postDesc">{post.description}</p>
 		</div>
 	);
 }

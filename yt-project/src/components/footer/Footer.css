@@ -1,0 +1,46 @@
+/* Footer Styles */
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+.Footer {
+    width: 100%;
+    font-family: 'Akaya Telivigala', cursive;
+	font-size: 28px;
+    background-color: #354161;
+    color: white;
+    /* border-top: 2px solid #234465; */
+    /* border-bottom: 2px solid #234465; */
+    margin-bottom: 1%;
+    bottom: 0px;
+  }
+  
+  .Footer p {
+    text-align: center;
+  }
+  
+  .Footer h2 {
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  #parent {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #left {
+    /* border: 1px solid lightgray; */
+    text-align: center;
+    color: white;
+    background-color: #354161;
+    width: 48%;
+    float: left;
+  }
+  
+  #right {
+    /* border: 1px solid lightgray; */
+    background-color: #354161;
+    width: 48%;
+    float: right;
+  }
+  
+  /* Footer Styles */

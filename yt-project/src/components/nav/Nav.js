@@ -2,74 +2,135 @@ import "./nav.css";
 import React from "react";
 import { Link } from "react-router-dom";
 
-function LoggedInNav(props) {
-	console.log(props);
-	return (
-		<nav className="Navigation">
-			<div className="Navigation">
-				<div className="topLeft">
-					<div>
-						<a href="/">
-							<img
-								class="center"
-								src="../../img/atlasHealthLogo.webp"
-								alt="Atlas logo"
-							/>
-						</a>
-					</div>
-				</div>
-				<div className="topCenter">
-					<ul className="topList">
-						<li className="listItem">
-							{/* Create */}
-							<Link to="create">Create</Link>
-						</li>
-						<li className="listItem" id="register">
-							Register
-							{/* <Link to="Register">Register</Link> */}
-						</li>
-						<li className="listItem" id="login">
-							Login
-							{/* <Link to="Login">Login</Link> */}
-						</li>
+function LoggedInNav() {
+  //console.log(props);
+  return (
+    <nav className="Navigation">
+      <div className="Navigation">
+        <div className="topLeft">
+          <div>
+            <a href="/">
+              <img
+                class="center"
+                src="../../img/atlasHealthLogo.webp"
+                alt="Atlas logo"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="topCenter">
+          <ul className="topList">
+            <li className="listItem" id="logout">
+              <Link to="logout">Logout</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="topRight">
+          <img
+            className="topImg"
+            src="../../img/Headshots-DavidHartwig.webp"
+            alt="headshot"
+          />
+          <a
+            href="http://instagram.com/atlas.health.and.wellness"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i class="topIcon fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  );
+}
 
-						<li className="listItem" id="logout">
-							Logout
-							{/* <Link to="logout">Logout</Link> */}
-						</li>
-					</ul>
-				</div>
-				<div className="topRight">
-					<img
-						className="topImg"
-						src="../../img/Headshots-DavidHartwig.webp"
-						alt="headshot"
-					/>
-					{/* <ul> */}
-					{/* <li className="listItem"> */}
-					<a
-						href="http://instagram.com/atlas.health.and.wellness"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<i class="topIcon fab fa-instagram"></i>
-						{/* <img
-							class="instagramlogo "
-							src="./img/instagram-black-on-white.webp"
-							alt="Instagram logo"
-						></img> */}
-					</a>
-					{/* </li> */}
-					{/* </ul> */}
-				</div>
+function AdminLoggedIn() {
+  return (
+    <nav className="Navigation">
+      <div className="Navigation">
+        <div className="topLeft">
+          <div>
+            <a href="/">
+              <img
+                class="center"
+                src="../../img/atlasHealthLogo.webp"
+                alt="Atlas logo"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="topCenter">
+          <ul className="topList">
+            <li className="listItem">
+              {/* Create */}
+              <Link to="create">Create</Link>
+            </li>
+            <li className="listItem" id="logout">
+              <Link to="logout">Logout</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="topRight">
+          <img
+            className="topImg"
+            src="../../img/Headshots-DavidHartwig.webp"
+            alt="headshot"
+          />
+          <a
+            href="http://instagram.com/atlas.health.and.wellness"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i class="topIcon fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  );
+}
 
-				{/* <Link to="logout">Logout</Link> */}
-				{/* </li> */}
-				{/* </ul> */}
-				{/* </div> */}
-			</div>
-		</nav>
-	);
+function LoggedOutNav() {
+  return (
+    <nav className="Navigation">
+      <div className="Navigation">
+        <div className="topLeft">
+          <div>
+            <a href="/">
+              <img
+                class="center"
+                src="../../img/atlasHealthLogo.webp"
+                alt="Atlas logo"
+              />
+            </a>
+          </div>
+        </div>
+        <div className="topCenter">
+          <ul className="topList">
+            <li className="listItem" id="register">
+              <Link to="register">Register</Link>
+            </li>
+            <li className="listItem" id="login">
+              <Link to="login">Login</Link>
+            </li>
+          </ul>
+        </div>
+        <div className="topRight">
+          <img
+            className="topImg"
+            src="../../img/Headshots-DavidHartwig.webp"
+            alt="headshot"
+          />
+          <a
+            href="http://instagram.com/atlas.health.and.wellness"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i class="topIcon fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  );
 }
 
 // yt code
@@ -79,18 +140,26 @@ function LoggedInNav(props) {
 // yt end code
 
 function Nav(props) {
-	const loggedIn = props.loggedin;
-	const admin = props.admin;
+//   let cookies = document.cookie.split(';')
+// 	.map(cookie=> cookie.split('='))
+// 	.reduce((accumulator, [key, value]) => ({...accumulator, [key.trim()]: decodeURIComponent(value)}),
+// 	{});
 
-	return <LoggedInNav />;
+// 	//console.log(cookies);
 
-	// if (loggedIn && admin) {
-	//   return <AdminLoggedIn />;
-	// } else if (loggedIn) {
-	//   return <LoggedInNav />;
-	// }else {
-	//   return <LoggedOutNav />;
-	// }
+// 	let user = cookies.user; 
+// 	console.log(user);
+
+  const loggedIn = props.loggedin;
+  const admin = props.admin;
+
+  if (loggedIn && admin) {
+    return <AdminLoggedIn />;
+  } else if (loggedIn) {
+    return <LoggedInNav />;
+  } else {
+    return <LoggedOutNav />;
+  }
 }
 
 export default Nav;

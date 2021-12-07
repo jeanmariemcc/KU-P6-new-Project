@@ -4,6 +4,9 @@ import Single from "./pages/single/Single";
 import Create from "./pages/create/Create";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes, useParams } from "react-router-dom";
+import Register from "./pages/register/Register";
+import Login from "./pages/login/Login";
+import Logout from "./pages/Logout";
 
 function App(props) {
 	let admin = true;
@@ -15,25 +18,39 @@ function App(props) {
 					<Route
 						path="/"
 						exact
-						element={<Home updateLogin={props.updateLogin} />}
-					></Route>
+						element={<Home />}
+					/>
 
 					<Route
 						path="/create"
 						element={
 							<Create
-								updateLogin={props.updateLogin}
+								
 								admin={admin}
 							/>
 						}
-					>
-						{/* <Route path="/create">
-						{admin ? <Create /> : <Home />} */}
-					</Route>
+					/>
+
 					<Route
 						path="/post/:id"
-						element={<Single updateLogin={props.updateLogin} />}
-					></Route>
+						element={<Single />}
+					/>
+
+					<Route
+						path="register"
+						element={<Register />} 
+					/>
+
+					<Route
+						path="login"
+						element={<Login />}
+					/>
+
+					<Route
+						path="logout"
+						element={<Logout />}
+					/>
+
 				</Routes>
 			</Router>
 		</div>

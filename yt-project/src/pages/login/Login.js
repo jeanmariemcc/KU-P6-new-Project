@@ -31,15 +31,7 @@ class Login extends React.Component {
 			document.cookie = `user={"email":"${data.user.email}","admin":${data.user.admin}}, "loggedin":true`;
 			//console.log(data.user.posts)
 			//add the updateLogin function
-            // let cookies = document.cookie.split(';')
-	// .map(cookie=> cookie.split('='))
-	// .reduce((accumulator, [key, value]) => ({...accumulator, [key.trim()]: decodeURIComponent(value)}),
-	// {});
-
-	// //console.log(cookies);
-
-	// let user = cookies.user; 
-	// console.log(user);
+           
 			this.props.updateLogin({
 				loggedin: data.token,
 				email: data.user.email,

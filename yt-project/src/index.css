@@ -584,3 +584,41 @@ footer .listItem {
 	display: flex;
 	align-items: center;
 }
+
+/* Register Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+.register {
+	font-family: 'Akaya Telivigala', cursive;
+	font-size: 1.75rem;
+	text-align: center;
+}
+
+.register h1{
+	text-align: center;
+	font-size: 3.5rem;
+}
+
+.registerImg {
+	width: 65vw;
+	height: 250px;
+	margin-top: 15%;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.registerSubmit {
+	/* position: absolute; */
+	top: 20px;
+	right: 50px;
+	color: white;
+	background-color: rgb(129, 125, 125);
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	font-size: 16px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}

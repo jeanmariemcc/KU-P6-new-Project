@@ -76,7 +76,7 @@ class LoginCheck extends React.Component {
 					updateLogin={this.updateLogin}
 				/>
 
-				<Footer updateLogin={this.updateLogin}/>
+				<Footer />
 			</div>
 		);
 	}

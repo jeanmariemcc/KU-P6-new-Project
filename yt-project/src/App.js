@@ -7,25 +7,26 @@ import { Route, Routes, useParams } from "react-router-dom";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import Logout from "./pages/Logout";
+import Aside from "./components/aside/Aside";
 
 function App(props) {
 	let admin = true;
 	return (
 		<div className="App Container">
 			<Router>
-				<Nav />
+				<Nav updateLogin={props.updateLogin}/>
 				<Routes>
 					<Route
 						path="/"
 						exact
-						element={<Home />}
+						element={<Home updateLogin={props.updateLogin}/>}
 					/>
 
 					<Route
 						path="/create"
 						element={
 							<Create
-								
+								updateLogin={props.updateLogin}
 								admin={admin}
 							/>
 						}
@@ -33,22 +34,22 @@ function App(props) {
 
 					<Route
 						path="/post/:id"
-						element={<Single />}
+						element={<Single updateLogin={props.updateLogin}/>}
 					/>
 
 					<Route
 						path="register"
-						element={<Register />} 
+						element={<Register updateLogin={props.updateLogin}/>} 
 					/>
 
 					<Route
 						path="login"
-						element={<Login />}
+						element={<Login updateLogin={props.updateLogin}/>}
 					/>
 
 					<Route
 						path="logout"
-						element={<Logout />}
+						element={<Logout updateLogin={props.updateLogin}/>}
 					/>
 
 				</Routes>

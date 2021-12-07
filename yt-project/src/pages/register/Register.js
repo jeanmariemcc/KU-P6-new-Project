@@ -62,15 +62,15 @@ function Register(props) {
 	};
 		//console.log(links);
 		return (
-			<div className="create">
+			<div className="register">
 				
 				<img
-					className="createImg"
+					className="registerImg"
 					src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/115/2016/06/03173421/figure7_2_1-e1464977654496.jpg"
 					alt=""
 				/>
 				
-				<h1 className="create">Register</h1>
+				<h1 className="register">Register</h1>
 				<form className="createForm" onSubmit={submitHandler}>
 				<div className="createFormGroup">
 					<input
@@ -109,7 +109,7 @@ function Register(props) {
 
 				
 				<div className="createFormGroup">
-					<button className="createSubmit" type="submit">
+					<button className="registerSubmit" type="submit">
 						Register
 					</button>
 				</div>

@@ -192,9 +192,10 @@
     text-decoration: underline;
   }
   
-  #parent {
+  .Footer #parent {
+	width: 100%;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
   }
   
   #left {
@@ -428,7 +429,7 @@ footer .listItem {
 
 .singlePost {
 	margin-left: 18%;
-	margin-top: 100px;
+	margin-top: -3.5%;
 }
 
 .singlePostWrapper {
@@ -565,7 +566,7 @@ footer .listItem {
 .loginImg {
 	width: 65vw;
 	height: 250px;
-	margin-top: 15%;
+	margin-top: 3%;
 	border-radius: 10px;
 	object-fit: cover;
 }
@@ -579,6 +580,7 @@ footer .listItem {
 	padding: 10px;
 	border: none;
 	border-radius: 10px;
+	margin-top: -7%;
 	font-size: 16px;
 	cursor: pointer;
 	display: flex;
@@ -603,7 +605,7 @@ footer .listItem {
 .registerImg {
 	width: 65vw;
 	height: 250px;
-	margin-top: 15%;
+	margin-top: 2%;
 	border-radius: 10px;
 	object-fit: cover;
 }

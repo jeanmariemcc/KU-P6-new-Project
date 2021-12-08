@@ -23,15 +23,12 @@ export default function Home() {
 	}, []);
 	return (
 		<>
-			<Header />
-
+			
 			<div className="home">
 				<Aside />
 				<Posts posts={posts} />
 				{/* posts are from setPosts */}
 			</div>
-
-			<Footer />
 		</>
 	);
 }

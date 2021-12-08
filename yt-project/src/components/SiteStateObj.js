@@ -3,6 +3,7 @@ import Nav from "./nav/Nav";
 import Footer from "./footer/Footer";
 import App from "../App";
 import Header from "./header/Header";
+import Aside from "./aside/Aside";
 // ????
 
 class LoginCheck extends React.Component {

@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import "../../index.css";
+import Aside from "../../components/aside/Aside";
 
 function isNewUser(email){
 	const userURL = "http://localhost:9999/atlas/users/"
@@ -63,7 +64,6 @@ function Register(props) {
 		//console.log(links);
 		return (
 			<div className="register">
-				
 				<img
 					className="registerImg"
 					src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/115/2016/06/03173421/figure7_2_1-e1464977654496.jpg"

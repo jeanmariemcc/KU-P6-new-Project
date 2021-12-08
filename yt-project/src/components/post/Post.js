@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import "./post.css";
 
 export default function Post({ post }) {
-	console.log(post);
-	//property of article is one article from the map function in Posts.js
+	// console.log(post);
+	//property of post is one article from the map function in Posts.js
 	return (
 		<div className="post">
 			<img className="postImg" src={post.imageURL} alt="atlas" />

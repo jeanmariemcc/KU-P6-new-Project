@@ -21,14 +21,15 @@
 	margin: 10px;
 	padding: 5px;
 	width: 80%;
-	border-top: solid 1px #a7a4a4;
-	border-bottom: solid 1px #a7a4a4;
-	text-align: center;
-	font-family: "Varela Round", sans-serif;
-	font-size: 12px;
-	line-height: 19px;
+	/* border-top: solid 1px #a7a4a4; */
+	/* border-bottom: solid 1px #a7a4a4; */
+	text-align: left;
+	/* font-family: "Varela Round", sans-serif; */
+	font-size: 20px;
+	font-weight: bolder;
+	line-height: 29px;
 	color: #222222;
-	font-weight: 600;
+	/* font-weight: 600; */
 }
 
 .asideItem > img {
@@ -39,6 +40,7 @@
 
 .asideItem > p {
 	padding: 30px;
+	text-align: justify;
 }
 
 .asideList {
@@ -48,9 +50,14 @@
 
 .asideListItem {
 	display: inline-block;
-	width: 50%;
+	width: 90%;
 	margin-top: 15px;
 	cursor: pointer;
+}
+
+.asidelinks {
+	cursor: pointer;
+	display: list-item;
 }
 
 .asideSocial {

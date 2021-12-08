@@ -25,7 +25,7 @@ export default function Home() {
 			<Header />
 
 			<div className="home">
-				<Aside />
+				<Aside posts={posts} />
 				<Posts posts={posts} />
 				{/* posts are from setPosts */}
 			</div>

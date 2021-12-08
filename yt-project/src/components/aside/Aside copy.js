@@ -1,9 +1,9 @@
 import "./aside.css";
-// import Asidelinks from "./Asidelinks";
+import Asidelinks from "./Asidelinks";
 import { Link } from "react-router-dom";
 
-export default function Aside({ posts }) {
-	console.log(posts);
+export default function Aside({ posts2 }) {
+	console.log(posts2);
 	return (
 		<div className="aside">
 			<div className="asideItem">
@@ -24,24 +24,9 @@ export default function Aside({ posts }) {
 			<div className="asideItem">
 				<span className="asideTitle">Blog Articles</span>
 				<ul className="asideList">
-					{posts.map((p) => (
-						<div>
-							<li key={p._id} className="asideListItem">
-								<div className="asideLink">
-									<span className="asideListItem">
-										<Link
-											to={`/post/${p._id}`}
-											className="link"
-										>
-											{p.title}
-										</Link>
-									</span>
-									<hr />
-								</div>
-							</li>
-						</div>
-						// <Asidelinks post={p} />
-					))}
+					{/* {posts.map((p) => (
+						<Asidelinks post={p} />
+					))} */}
 				</ul>
 			</div>
 			<div className="asideItem">

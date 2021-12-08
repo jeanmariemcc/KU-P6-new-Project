@@ -2,6 +2,7 @@ import "./home.css";
 import Header from "../../components/header/Header";
 import Aside from "../../components/aside/Aside";
 import Posts from "../../components/posts/Posts";
+import Footer from "../../components/footer/Footer";
 
 import axios from "axios"; // library used to send asynch CRUD
 import { useLocation } from "react-router";
@@ -22,8 +23,7 @@ export default function Home() {
 	}, []);
 	return (
 		<>
-			<Header />
-
+			
 			<div className="home">
 				<Aside posts={posts} />
 				<Posts posts={posts} />

@@ -60,13 +60,18 @@ export default function Create() {
 					<textarea
 						placeholder="Tell your story..."
 						type="text"
-						className="createInput createText"
-						onChange={(e) => setDescription(e.target.value)}
-					></textarea>
+						autoFocus={true}
+						name="description"
+						onChange={(e) => {
+							setDescription(e.target.value);
+						}}
+					/>
 				</div>
-				<button className="createSubmit" type="submit">
-					Publish
-				</button>
+				<div className="createFormGroup">
+					<button className="createSubmit" type="submit">
+						Publish
+					</button>
+				</div>
 			</form>
 		</div>
 	);

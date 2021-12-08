@@ -1,6 +1,6 @@
 function loginHelper(state){
     let data = JSON.stringify(state)
-		console.log(data)
+		// console.log(data)
 		//add our fetch api
 		let resources = {
 			method: 'POST',

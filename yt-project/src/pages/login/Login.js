@@ -15,7 +15,7 @@ class Login extends React.Component {
 	}
 	//todo fetch the first 11 posts to get the links to the pages
 	changeHandler(event) {
-		console.log(event.target)
+		// console.log(event.target)
 		if(event.target.name==="email"){
 			this.setState({email: event.target.value});	
 		}else if(event.target.name==="password"){
@@ -37,10 +37,7 @@ class Login extends React.Component {
 				email: data.user.email,
 				admin: data.admin
 			})
-			console.log(this.props);
-			if (data.user.admin === true) {
-				window.location.reload(true);
-			} 
+			 console.log(this.props.updateLogin());
 		})
 		
 		//need to save the email
@@ -56,12 +53,11 @@ class Login extends React.Component {
 		//console.log(this.state)
 		return (
 			<div className="login">
-				
-				<img
+				{/* <img
 					className="loginImg"
 					src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/115/2016/06/03173421/figure7_2_1-e1464977654496.jpg"
 					alt=""
-				/>
+				/> */}
 				
 				<h1 className="login">Login</h1>
 				<form className="createForm" onSubmit={this.submitHandler}>

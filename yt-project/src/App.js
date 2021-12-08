@@ -44,7 +44,7 @@ function App(props) {
 							<PrivateRoute 
 								isAuth={loggedIn}
 								path="post"
-								redirectTo="/"
+								redirectTo="/login"
 							>
 								<Single updateLogin={props.updateLogin}/>
 							</PrivateRoute>

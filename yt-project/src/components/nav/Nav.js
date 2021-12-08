@@ -150,8 +150,6 @@ function Nav(props) {
 // 	let user = cookies.user; 
 // 	console.log(user);
 
-console.log(props);
-
   const loggedIn = props.loggedin;
   const admin = props.admin;
 

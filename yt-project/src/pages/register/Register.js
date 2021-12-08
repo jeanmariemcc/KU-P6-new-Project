@@ -64,11 +64,11 @@ function Register(props) {
 		//console.log(links);
 		return (
 			<div className="register">
-				<img
+				{/* <img
 					className="registerImg"
 					src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/115/2016/06/03173421/figure7_2_1-e1464977654496.jpg"
 					alt=""
-				/>
+				/> */}
 				
 				<h1 className="register">Register</h1>
 				<form className="createForm" onSubmit={submitHandler}>

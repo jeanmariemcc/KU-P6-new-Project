@@ -34,6 +34,7 @@ export default function Create() {
 					<input
 						className="createInput"
 						placeholder="Title"
+						name="title"
 						type="text"
 						autoFocus={true}
 						value={title}
@@ -44,8 +45,6 @@ export default function Create() {
 					<img className="createImg" src={imageURL} alt="" />
 				</div>
 				<div className="createFormGroup">
-					{/* Actually want the image URL here */}
-
 					<input
 						className="createInput"
 						placeholder="Image URL"
@@ -60,6 +59,7 @@ export default function Create() {
 					<textarea
 						placeholder="Tell your story..."
 						type="text"
+						className="createInput createText"
 						autoFocus={true}
 						name="description"
 						onChange={(e) => {

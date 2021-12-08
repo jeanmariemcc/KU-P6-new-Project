@@ -3,7 +3,7 @@ import "./aside.css";
 import { Link } from "react-router-dom";
 
 export default function Aside({ posts }) {
-	console.log(posts);
+	// console.log(posts);
 	return (
 		<div className="aside">
 			<div className="asideItem">

@@ -6,7 +6,7 @@ class Footer extends React.Component {
 	render() {
 		// console.log(links);
 		return (
-			<footer className="Footer">
+			<footer className="footer">
 				{/* <footer> */}
 				<div>
 					<h2>CONTACT US</h2>

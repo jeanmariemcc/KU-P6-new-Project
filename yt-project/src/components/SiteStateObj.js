@@ -33,7 +33,7 @@ class LoginCheck extends React.Component {
 			loggedin: (login) ? true : false,
 			email: user.email,
 			token: login,
-			admin: user.admin
+			admin: (user.admin) ? true : false
 		};
 		this.updateLogin = this.updateLogin.bind(this);
 	}
@@ -49,7 +49,7 @@ class LoginCheck extends React.Component {
 					loggedin: (user.loggedin) ? true : false,
 					email: user.email,
 					token: user.loggedin,
-					admin: user.admin
+					admin: (user.admin) ? true : false
 				};
 			} else {
 				return {

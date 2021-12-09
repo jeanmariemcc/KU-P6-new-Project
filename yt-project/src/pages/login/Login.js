@@ -26,7 +26,7 @@ class Login extends React.Component {
 		.then(data=>{
 			//console.log(data);
 			document.cookie = `x-auth-token=`+JSON.stringify(data.token);
-			document.cookie = `user={"username":"${data.user.email}","admin":${data.admin}}`
+			document.cookie = `user={"username":"${data.user.email}","admin":${data.user.admin}}`
 			//console.log(data.user.posts)
 			this.props.updateLogin({
 				loggedin: data.token,

@@ -4,6 +4,8 @@ import Footer from "./footer/Footer";
 import App from "../App";
 import Header from "./header/Header";
 
+// ????
+
 class LoginCheck extends React.Component {
 	constructor(props) {
 		super(props);
@@ -31,7 +33,7 @@ class LoginCheck extends React.Component {
 			loggedin: (login) ? true : false,
 			email: user.email,
 			token: login,
-			admin: (user.admin) ? true : false
+			admin: user.admin
 		};
 		this.updateLogin = this.updateLogin.bind(this);
 	}
@@ -47,7 +49,7 @@ class LoginCheck extends React.Component {
 					loggedin: (user.loggedin) ? true : false,
 					email: user.email,
 					token: user.loggedin,
-					admin: (user.admin) ? true : false
+					admin: user.admin
 				};
 			} else {
 				return {

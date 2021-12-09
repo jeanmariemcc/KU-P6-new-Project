@@ -1,6 +1,7 @@
 import "./nav.css";
 import React from "react";
 import { Link } from "react-router-dom";
+import Logout from "../../pages/Logout";
 
 function LoggedInNav() {
   //console.log(props);

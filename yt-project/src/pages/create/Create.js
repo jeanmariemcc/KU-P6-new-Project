@@ -42,7 +42,10 @@ export default function Create() {
 					/>
 				</div>
 				<div>
-					<img className="createImg" src={imageURL} alt="" />
+					{imageURL && (
+						<img className="createImg" src={imageURL} alt="" />
+					)}
+					{/* <img className="createImg" src={imageURL} alt="" /> */}
 				</div>
 				<div className="createFormGroup">
 					<input

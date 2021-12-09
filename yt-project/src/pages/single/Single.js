@@ -17,6 +17,7 @@ function Single(props) {
 		const fetchPosts = async () => {
 			const res = await axios.get("/articles/");
 			// console.log(res.data);
+			res.data.reverse();
 			setPosts(res.data);
 		};
 		fetchPosts();

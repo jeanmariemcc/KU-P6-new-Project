@@ -1,11 +1,8 @@
 import "./home.css";
-import Header from "../../components/header/Header";
 import Aside from "../../components/aside/Aside";
 import Posts from "../../components/posts/Posts";
-import Footer from "../../components/footer/Footer";
 
 import axios from "axios"; // library used to send asynch CRUD
-import { useLocation } from "react-router";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -16,14 +13,13 @@ export default function Home() {
 		// mongodb proxy set in package.json as http://localhost:9999/atlas
 		const fetchPosts = async () => {
 			const res = await axios.get("/articles/");
-			// console.log(res.data);
+			res.data.reverse();
 			setPosts(res.data);
 		};
 		fetchPosts();
 	}, []);
 	return (
 		<>
-			
 			<div className="home">
 				<Aside posts={posts} />
 				<Posts posts={posts} />

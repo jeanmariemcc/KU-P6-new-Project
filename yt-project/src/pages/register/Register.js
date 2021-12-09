@@ -26,8 +26,8 @@ function registerUser(email, password) {
 		password,
 		admin: false,
 	});
-	console.log("register data");
-	console.log(data);
+	// console.log("register data");
+	// console.log(data);
 	let resources = {
 		method: "POST",
 		headers: {
@@ -35,7 +35,7 @@ function registerUser(email, password) {
 		},
 		body: data,
 	};
-	console.log(data);
+	// console.log(data);
 	return fetch(url, resources).then((res) => res.json());
 }
 

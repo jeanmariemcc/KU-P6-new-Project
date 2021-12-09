@@ -1,10 +1,8 @@
 function logoutHelper(){
     let cookies = document.cookie.split("; ");
-    let token = cookies
-      .find((cookie) => {
+    let token = cookies.find((cookie) => {
         return cookie.includes("x-auth-token");
-      })
-      .split("=")[1];
+      }).split("=")[1];
   
     console.log(token);
     let resources = {

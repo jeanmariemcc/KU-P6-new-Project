@@ -1,15 +1,16 @@
 import cookie from "react-cookies";
-import Aside from "../components/aside/Aside";
 import logoutHelper from "../Helpers/logoutHelper";
+import {useNavigate} from "react-router-dom";
 
-function logout() {
+function Logout() {
+  let navigate = useNavigate();
   logoutHelper()
     .then((data) => {
-                console.log(data);
-                cookie.remove("x-auth-token");
-                cookie.remove("user");
-                window.location.reload(false);
+        console.log(data);
+        cookie.remove("x-auth-token");
+        cookie.remove("user");        
+        window.location.reload(false);
     })
   }
 
-export default logout;
+export default Logout;

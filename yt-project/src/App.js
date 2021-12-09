@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Home from "./pages/home/Home";
 import Single from "./pages/single/Single";
 import Create from "./pages/create/Create";
@@ -8,17 +10,18 @@ import Logout from "./pages/Logout";
 import PrivateRoute from './components/PrivateRoute';
 
 function App(props) {
-	console.log(props);
 	const loggedIn = props.loggedin;
 	const loggedOut = !props.loggedin;
+	
 	let admin = props.admin;
 	return (
+	
 		<div className="App Container">
 				<Routes>
 					<Route
 						path="/"
 						exact
-						element={<Home updateLogin={props.updateLogin}/>}
+						element={<Home />}
 					/>
 
 					<Route
@@ -91,6 +94,8 @@ function App(props) {
 					/>
 				</Routes>
 		</div>
+	
+		
 	);
 }
 export default App;

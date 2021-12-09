@@ -5,17 +5,16 @@ import loginHelper from "../../Helpers/loginHelper";
 class Login extends React.Component {
 	constructor(props){
 		super(props);
-		this.state = {
+		this.state ={
 			email:'',
-			password:'',
-			admin: false
+			password:''
 		}
 		this.changeHandler = this.changeHandler.bind(this);
 		this.submitHandler = this.submitHandler.bind(this);
 	}
 	//todo fetch the first 11 posts to get the links to the pages
 	changeHandler(event) {
-		// console.log(event.target)
+		//console.log(event.target)
 		if(event.target.name==="email"){
 			this.setState({email: event.target.value});	
 		}else if(event.target.name==="password"){
@@ -23,24 +22,21 @@ class Login extends React.Component {
 		}
 	}
 	submitHandler(event) {
-		//fetch api
 		loginHelper(this.state)
 		.then(data=>{
-			console.log(data);
-			document.cookie = `x-auth-token=`+ JSON.stringify(data.token);
-			document.cookie = `user={"email":"${data.user.email}","admin":${data.user.admin}}, "loggedin":true`;
+			//console.log(data);
+			document.cookie = `x-auth-token=`+JSON.stringify(data.token);
+			document.cookie = `user={"username":"${data.user.email}","admin":${data.admin}}`
 			//console.log(data.user.posts)
-			//add the updateLogin function
-           
 			this.props.updateLogin({
 				loggedin: data.token,
 				email: data.user.email,
-				admin: data.admin
+				admin: data.user.admin
 			})
-			 console.log(this.props.updateLogin());
 		})
 		
-		//need to save the email
+		//add the updateLogin function
+		//need to save the email and the # of posts from the user
 		event.preventDefault();
 		// Doing some AJAX with the data...
 		//run the updateLogin method

@@ -50,7 +50,7 @@
 
 .asideListItem {
 	display: inline-block;
-	width: 90%;
+	/* width: 90%; */
 	margin-top: 15px;
 	cursor: pointer;
 }

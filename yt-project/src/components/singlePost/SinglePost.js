@@ -68,7 +68,9 @@ function SinglePost(props) {
 					{editMode && (
 						<>
 							<div>
-								<label>Image URL</label>
+								<label className="singlePostInputLabel">
+									Image URL:
+								</label>
 								<input
 									type="text"
 									value={imageURL}
@@ -86,7 +88,9 @@ function SinglePost(props) {
 					{editMode ? (
 						<>
 							<div>
-								<label>Title</label>
+								<label className="singlePostInputLabel">
+									Title:
+								</label>
 								<input
 									type="text"
 									value={title}
@@ -123,7 +127,9 @@ function SinglePost(props) {
 					{editMode ? (
 						<>
 							<div>
-								<label>Description</label>
+								<label className="singlePostInputLabel">
+									Description:
+								</label>
 								<textarea
 									className="singlePostDescInput"
 									value={description}

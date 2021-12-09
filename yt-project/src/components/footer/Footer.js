@@ -15,8 +15,8 @@ class Footer extends React.Component {
 						<p>
 							<br />
 							We’re here for you when you need us. Call us to
-							schedule an appointment or use the contact form
-							below and we’ll get back to you as soon as possible.
+							schedule an appointment and we’ll get back to you as
+							soon as possible.
 						</p>
 						<p>Boynton Beach, FL 33435</p>
 						<p>info@atlashealthandwellness.com</p>

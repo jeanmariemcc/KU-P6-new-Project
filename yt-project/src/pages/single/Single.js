@@ -5,7 +5,10 @@ import SinglePost from "../../components/singlePost/SinglePost";
 import { useEffect, useState } from "react";
 import axios from "axios"; // library used to send asynch CRUD
 
-function Single() {
+function Single(props) {
+	console.log("Single.js");
+	console.log(props.admin);
+	const admin = props.admin;
 	const [posts, setPosts] = useState([]); // empty because have not fetched data yet
 	useEffect(() => {
 		// can't fetch data directly here b/c asynch,
@@ -21,7 +24,7 @@ function Single() {
 	return (
 		<div className="single">
 			<Aside posts={posts} />
-			<SinglePost />
+			<SinglePost admin={admin} />
 		</div>
 	);
 }

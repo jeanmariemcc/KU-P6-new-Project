@@ -177,10 +177,11 @@
 	font-size: 18px;
 	background-color: rgb(73, 72, 72);
 	color: white;
-	border-top: 2px solid #234465; 
+	border-top: 5px solid #050505; 
 	/* border-bottom: 2px solid #234465; */
+	padding-bottom: 0.5%;
 	text-align: center;
-	margin-bottom: 1%;
+	margin-bottom: 0.5%;
 	bottom: 0px;
 }
 

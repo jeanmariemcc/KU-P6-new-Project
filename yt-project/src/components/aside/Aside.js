@@ -15,10 +15,10 @@ export default function Aside({ posts }) {
 				/>
 				<p>
 					Dr. David Hartwig is the founder and owner of Atlas Health
-					and Wellness, established in 2021. Over the next several
-					years, David plans to reshape the concept of health and
-					wellness by providing highly skilled PT directly in the
-					homes of the community of Palm Beach County and beyond.
+					and Wellness, established in 2021. David is reshaping the
+					concept of health and wellness by providing highly skilled
+					Physical Therapy directly in the homes of the community of
+					Palm Beach County and beyond.
 				</p>
 			</div>
 			<div className="asideItem">
